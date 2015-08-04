@@ -1,0 +1,6 @@
+<main *ng-if="m.screen === 'main'" [stats]="m.stats" [profile]="m.profile"></main>
+<tasks *ng-if="m.screen === 'habits'" [m]="m.habits" mode="habit"></tasks>
+<tasks *ng-if="m.screen === 'dailys'" [m]="m.dailys" mode="daily"></tasks>
+<tasks *ng-if="m.screen === 'todos'" [m]="m.todos" mode="todo"></tasks>
+<habit *ng-if="m.screen === 'showHabit'" [m]="m.selectedTask"></habit>
+<habit *ng-if="m.screen === 'showDaily'" [m]="m.selectedTask"></habit>

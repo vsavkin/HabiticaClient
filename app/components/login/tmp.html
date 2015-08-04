@@ -1,0 +1,24 @@
+<h1>Habit RPG</h1>
+<form #f="form">
+  <div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__supporting-text">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" upgrade="MaterialTextfield">
+        <input class="mdl-textfield__input" type="text" ng-control="userId"/>
+        <label class="mdl-textfield__label" for="sample1">User ID...</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" upgrade="MaterialTextfield">
+        <input class="mdl-textfield__input" type="text" ng-control="apiToken"/>
+        <label class="mdl-textfield__label" for="sample1">API Token...</label>
+      </div>
+
+    </div>
+
+    <div class="filler"></div>
+    <div class="mdl-card__actions mdl-card--border">
+      <button class="mdl-button mdl-button--raised mdl-button--accent" (click)="saveKey(f.value)" type="submit">
+        Login
+      </button>
+    </div>
+  </div>
+</form>

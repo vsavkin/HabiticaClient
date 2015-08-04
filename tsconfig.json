@@ -1,0 +1,19 @@
+{
+    "version": "1.5.3",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true
+    },
+    "files": [
+        "app/app.ts",
+        "node_modules/immutable/dist/immutable.d.ts",
+        "tsd_typings/tsd.d.ts"
+    ]
+}

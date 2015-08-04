@@ -1,0 +1,34 @@
+<form [ng-form-model]="form">
+  <div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__supporting-text">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" upgrade="MaterialTextfield">
+        <input class="mdl-textfield__input" type="text" ng-control="text"/>
+      </div>
+
+      <div class="block">
+        <label>Directions</label>
+
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"
+          [class.mdl-button--colored]="form.value.up" (^click)="swapUp()">
+          <i class="material-icons">add</i>
+        </button>
+
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"
+          [class.mdl-button--colored]="form.value.down" (^click)="swapDown()">
+          <i class="material-icons">remove</i>
+        </button>
+      </div>
+    </div>
+
+    <div class="filler"></div>
+    <div class="mdl-card__actions mdl-card--border">
+      <button class="mdl-button mdl-button--raised mdl-button--accent" (click)="saveHabit()" type="submit">
+        Save
+      </button>
+
+      <button class="mdl-button mdl-button--raised" (click)="actions.gotoHabits()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<button id="menu"
+        class="mdl-button mdl-js-button mdl-button--icon" upgrade="MaterialButton">
+  <i class="material-icons">more_vert</i>
+</button>
+
+{{title}}
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="menu" upgrade="MaterialMenu">
+  <li class="mdl-menu__item" (click)="actions.gotoMain()">Main</li>
+  <li class="mdl-menu__item" (click)="actions.gotoHabits()">Habits</li>
+  <li class="mdl-menu__item" (click)="actions.gotoDailys()">Dailys</li>
+  <li class="mdl-menu__item" (click)="actions.gotoTodos()">Todos</li>
+  <li class="mdl-menu__item" (click)="logOut()">Log out</li>
+</ul>

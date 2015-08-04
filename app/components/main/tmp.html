@@ -1,0 +1,47 @@
+<div class="mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">{{profile.name}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <table class="mdl-data-table">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Property</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Class</td>
+          <td>{{stats.class}}</td>
+        </tr>
+
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Gold Coins</td>
+          <td>{{stats.gp|number:'.0-0'}}</td>
+        </tr>
+
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Exp</td>
+          <td>{{stats.exp|number:'.0-0'}} / {{stats.toNextLevel|number:'.0-0'}}</td>
+        </tr>
+
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Health</td>
+          <td>{{stats.hp|number:'.0-0'}} / {{stats.maxHealth|number:'.0-0'}}</td>
+        </tr>
+
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Mana</td>
+          <td>{{stats.mp|number:'.0-0'}} / {{stats.maxMP|number:'.0-0'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="filler"></div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="actions.refresh()">
+      Refresh
+    </a>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div *ng-if="m.count() === 0" class="empty">
+  Empty :)
+</div>
+
+<div *ng-for="#task of m" class="task-card mdl-card mdl-shadow--2dp" [class.optional]="isOptional(task)">
+  <div class="task-description">
+    {{task.text}}
+  </div>
+
+  <div class="mdl-card__actions mdl-card--border">
+    <button *ng-if="task.type === 'daily'"
+      class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"
+      (^click)="taskUp(task)" [disabled]="task.completed">
+      <i class="material-icons">check circle</i>
+    </button>
+
+    <button *ng-if="task.type === 'todo'"
+      class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"
+      (^click)="taskUp(task)">
+      <i class="material-icons">check circle</i>
+    </button>
+
+    <button *ng-if="task.up" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" (^click)="taskUp(task)">
+      <i class="material-icons">add</i>
+    </button>
+
+    <button *ng-if="task.down" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" (^click)="taskDown(task)">
+      <i class="material-icons">remove</i>
+    </button>
+
+    <a class="mdl-button mdl-button--colored" disabled>
+      Details
+    </a>
+  </div>
+</div>
